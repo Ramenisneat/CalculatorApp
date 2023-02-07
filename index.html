@@ -33,21 +33,21 @@ None
 <!--Script details Javascript functions for storage functions and calculations-->	
 <script>
 	// Variables in Javascript are defined via the following basic format. Like Python, you don't need to specify a type.
-  var exampleVariable = "Hello, world!";
-  
-  // Useful variables for your calculation code.
-  var firstNumber = 0;
-  var secondNumber = 0;
-  var outputNumber = 0;
+	var exampleVariable = "Hello, world!";
+	
+	// Useful variables for your calculation code.
+  	var firstNumber = 0;
+  	var secondNumber = 0;
+  	var outputNumber = 0;
 	
 	// Functions in Javascript are defined via the following basic format.
 	function exampleFunction(parameter1, parameter2)
 	{
-    // alert() is a built-in function to create a pop-up.
+    		// alert() is a built-in function to create a pop-up.
 		alert("Parameter 1 is: " + parameter1 + "\n" + "Parameter 2 is: " + parameter2);
     
-    // console.log() is a built-in function to record something in the console. You can access the console by right-clicking the web-page, clicking "Inspect Element", and navigating to the Console tab in the interface. Useful for troubleshooting.
-    console.log(exampleVariable);
+    		// console.log() is a built-in function to record something in the console. You can access the console by right-clicking the web-page, clicking "Inspect Element", and navigating to the Console tab in the interface. Useful for troubleshooting.
+    		console.log(exampleVariable);
 	}
 	
   
@@ -55,30 +55,30 @@ None
 	// Calculates the sum of the two numbers that the user inputs and stores it in the outputNumber variable.
 	function addition()
 	{
-    firstNumber = document.getElementById("firstnumber").value;
-    secondNumber = document.getElementById("secondnumber").value;
+    		firstNumber = document.getElementById("firstnumber").value;
+    		secondNumber = document.getElementById("secondnumber").value;
 
-    outputNumber = firstNumber + secondNumber;
+    		outputNumber = firstNumber + secondNumber;
     
-    displayResults();
+    		displayResults();
 	}
   
   
   
-  // Displays the output value computed by the calculator.
-  function displayResults()
-  {
-    document.getElementById("end").innerHTML = outputNumber;
-  }
+  	// Displays the output value computed by the calculator.
+  	function displayResults()
+  	{
+    		document.getElementById("end").innerHTML = outputNumber;
+  	}
   
   
   
-  // Resets all variables.
-  function resetVariables()
-  {
-    // Code to reset all variables to their starting values goes here.
+  	// Resets all variables.
+  	function resetVariables()
+  	{
+    		// Code to reset all variables to their starting values goes here.
     
-  }
+  	}
 </script>
 	
 	
@@ -117,11 +117,11 @@ None
 		<div id="content" class="w3-container">
 			<p>This app performs a specific calculation based on the user's input.</p>
       
-      <!--Button. When clicked, demonstrates the results of the example function using two sample numbers.-->
-      <a onclick="exampleFunction(1, 2);">Test Sample Function</a><br>
+			<!--Button. When clicked, demonstrates the results of the example function using two sample numbers.-->
+				<a onclick="exampleFunction(1, 2);">Test Sample Function</a><br>
 	
 			<!--The following button takes the user to the page named "one" when clicked.-->
-			<a href="#main" class="w3-btn w3-grey w3-round">BEGIN CALCULATION</a>
+				<a href="#main" class="w3-btn w3-grey w3-round">BEGIN CALCULATION</a>
 	
 			<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream and Maker Space Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY/Maker Space Streams, FRI, and The University of Texas system are not liable for anything related to this code.</p>			
 			
@@ -137,43 +137,41 @@ None
 				</div>
 	
     				<div id="content" class="w3-container">
-              <!--Form element. This allows for user input in HTML.-->
+					<!--Form element. This allows for user input in HTML.-->
 					       <form>
-                   <!--Label for first input field.-->
-                   <label for="firstnumber">First number:</label><br>
-                   <!--User input box.-->
-                   <input type="number" id="firstnumber" value="0"><br>
-                   <!--Label for second input field.-->
-                   <label for="secondnumber">Second number:</label><br>
-                   <!--User input box.-->
-                   <input type="number" id="secondnumber" value="0"><br><br><br>
-                 </form>
+						<!--Label for first input field.-->
+						<label for="firstnumber">First number:</label><br>
+						<!--User input box.-->
+						<input type="number" id="firstnumber" value="0"><br>
+						<!--Label for second input field.-->
+						<label for="secondnumber">Second number:</label><br>
+						<!--User input box.-->
+						<input type="number" id="secondnumber" value="0"><br><br><br>
+						</form>
 				
             
-                 <center>
-               <!--Button. When clicked, runs the addition() function.-->
-                 <a onclick="addition();">Add</a><br>
+					<center>
+					<!--Button. When clicked, runs the addition() function.-->
+                 			<a onclick="addition();">Add</a><br>
                    
                    
 
                    
                    
-              <!--The following placeholder p element text should be replaced with the results of the calculation.-->
-                 <div id="content" class="w3-container">
-                   <p id='end'>Results should appear here.</p>
-                 </div>
+					<!--The following placeholder p element text should be replaced with the results of the calculation.-->
+                 			<div id="content" class="w3-container">
+                   				<p id='end'>Results should appear here.</p>
+                 			</div>
                  
-                 <br>
-                 <br>
+                 			<br>
+                 			<br>
                    
-        				 <p>Return to home page.</p> 
-					    <!--The following button takes the user back to the home page and resets all variables.-->			
-         				 <a href="#content"  onclick="resetVariables();"	class="w3-btn w3-black">RESET</a>
-                 </center>
+					<p>Return to home page and reset calculator.</p> 
+					<!--The following button takes the user back to the home page and resets all variables.-->			
+					<a href="#content"  onclick="resetVariables();"	class="w3-btn w3-black">RESET</a>
+					</center>
     				</div>
 			</div>
-			
-			
 	</div>
 </body>
 	
