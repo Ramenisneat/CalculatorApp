@@ -1,1 +1,180 @@
+<!DOCTYPE html> 
+<html> 
+<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream and Maker Space Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY and Maker Space Streams, FRI, and The University of Texas system are not liable for anything related to this code. 
+ 
+Authors in chronological order of contribution:
+Tim Riedel
+Niam Kuttanna
+ 
+Further Information:
+http://diystream.cns.utexas.edu/
 
+Research Educator:
+Timothy Riedel
+triedel@utexas.edu
+ 
+Brief Description of Goal of Code:
+Perform various calculations based on user input.
+ 
+Known Issues:
+None
+-->
+   
+<!--Header displays app title at the top of the page-->
+<head> 
+      <title>Web-Based Calculator</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+</head>
+
+	
+<!--Script details Javascript functions for storage functions and calculations-->	
+<script>
+	// Variables in Javascript are defined via the following basic format. Like Python, you don't need to specify a type.
+  var exampleVariable = "Hello, world!";
+  
+  // Useful variables for your calculation code.
+  var firstNumber = 0;
+  var secondNumber = 0;
+  var outputNumber = 0;
+	
+	// Functions in Javascript are defined via the following basic format.
+	function exampleFunction(parameter1, parameter2)
+	{
+    // alert() is a built-in function to create a pop-up.
+		alert("Parameter 1 is: " + parameter1 + "\n" + "Parameter 2 is: " + parameter2);
+    
+    // console.log() is a built-in function to record something in the console. You can access the console by right-clicking the web-page, clicking "Inspect Element", and navigating to the Console tab in the interface. Useful for troubleshooting.
+    console.log(exampleVariable);
+	}
+	
+  
+  
+	// Calculates the sum of the two numbers that the user inputs and stores it in the outputNumber variable.
+	function addition()
+	{
+    firstNumber = document.getElementById("firstnumber").value;
+    secondNumber = document.getElementById("secondnumber").value;
+
+    outputNumber = firstNumber + secondNumber;
+    
+    displayResults();
+	}
+  
+  
+  
+  // Displays the output value computed by the calculator.
+  function displayResults()
+  {
+    document.getElementById("end").innerHTML = outputNumber;
+  }
+  
+  
+  
+  // Resets all variables.
+  function resetVariables()
+  {
+    // Code to reset all variables to their starting values goes here.
+    
+  }
+</script>
+	
+	
+<!--Allows for multiple mini pages to be displayed within the single overall app, and describes the format.-->	
+<style>	
+	.body
+	{
+     		margin: 0em;
+	}
+	.page
+	{
+    		width: 100vw;
+    		height: 100vh;
+    		position: fixed;
+    		top: 0;
+    		left: -100vw;
+    		overflow-y: auto;
+    		z-index: 0;
+    		background-color: hsl(0,0%,100%);
+	}
+  	.page:target
+	{
+    		left: 0vw;
+    		z-index: 1;
+	}
+</style>
+
+	
+<!--Describes the content of the pages within the app.-->
+<body>
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Web-Based Simple Calculator</h1>
+	</div>
+		
+		<!--This represents the home page and contains a description of the app and its purpose.-->
+		<div id="content" class="w3-container">
+			<p>This app performs a specific calculation based on the user's input.</p>
+      
+      <!--Button. When clicked, demonstrates the results of the example function using two sample numbers.-->
+      <a onclick="exampleFunction(1, 2);">Test Sample Function</a><br>
+	
+			<!--The following button takes the user to the page named "one" when clicked.-->
+			<a href="#main" class="w3-btn w3-grey w3-round">BEGIN CALCULATION</a>
+	
+			<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream and Maker Space Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY/Maker Space Streams, FRI, and The University of Texas system are not liable for anything related to this code.</p>			
+			
+			
+			
+			
+		<!--This block represents the main page.-->
+			<div class="page" id="main">
+	
+			<!--Calculator interface page.-->
+				<div id="header" class="w3-container w3-flat-carrot">
+					<h1>User Input Page</h1>
+				</div>
+	
+    				<div id="content" class="w3-container">
+              <!--Form element. This allows for user input in HTML.-->
+					       <form>
+                   <!--Label for first input field.-->
+                   <label for="firstnumber">First number:</label><br>
+                   <!--User input box.-->
+                   <input type="number" id="firstnumber" value="0"><br>
+                   <!--Label for second input field.-->
+                   <label for="secondnumber">Second number:</label><br>
+                   <!--User input box.-->
+                   <input type="number" id="secondnumber" value="0"><br><br><br>
+                 </form>
+				
+            
+                 <center>
+               <!--Button. When clicked, runs the addition() function.-->
+                 <a onclick="addition();">Add</a><br>
+                   
+                   
+
+                   
+                   
+              <!--The following placeholder p element text should be replaced with the results of the calculation.-->
+                 <div id="content" class="w3-container">
+                   <p id='end'>Results should appear here.</p>
+                 </div>
+                 
+                 <br>
+                 <br>
+                   
+        				 <p>Return to home page.</p> 
+					    <!--The following button takes the user back to the home page and resets all variables.-->			
+         				 <a href="#content"  onclick="resetVariables();"	class="w3-btn w3-black">RESET</a>
+                 </center>
+    				</div>
+			</div>
+			
+			
+	</div>
+</body>
+	
+</html>
