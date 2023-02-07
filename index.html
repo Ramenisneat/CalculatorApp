@@ -58,7 +58,8 @@ None
     		firstNumber = document.getElementById("firstnumber").value;
     		secondNumber = document.getElementById("secondnumber").value;
 
-    		outputNumber = firstNumber + secondNumber;
+    		outputNumber += firstNumber;
+		outputNumber += secondNumber;
     
     		displayResults();
 	}
@@ -118,7 +119,7 @@ None
 			<p>This app performs a specific calculation based on the user's input.</p>
       
 			<!--Button. When clicked, demonstrates the results of the example function using two sample numbers.-->
-				<a onclick="exampleFunction(1, 2);">Test Sample Function</a><br>
+				<a onclick="exampleFunction(1, 2);" class="w3-btn w3-grey">Test Sample Function</a><br>
 	
 			<!--The following button takes the user to the page named "one" when clicked.-->
 				<a href="#main" class="w3-btn w3-grey w3-round">BEGIN CALCULATION</a>
@@ -152,7 +153,7 @@ None
             
 					<center>
 					<!--Button. When clicked, runs the addition() function.-->
-                 			<a onclick="addition();">Add</a><br>
+                 			<a onclick="addition();" class="w3-btn w3-grey">Add</a><br>
                    
                    
 
@@ -160,7 +161,7 @@ None
                    
 					<!--The following placeholder p element text should be replaced with the results of the calculation.-->
                  			<div id="content" class="w3-container">
-                   				<p id='end'>Results should appear here.</p>
+                   				<p id="end">Results should appear here.</p>
                  			</div>
                  
                  			<br>
