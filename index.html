@@ -107,11 +107,11 @@ None
     		var b = parseFloat(document.getElementById("b").value);
     		var c = parseFloat(document.getElementById("c").value);
     		var x = parseFloat(document.getElementById("x").value);
-
-
 			
 
     		outputNumber = a * x * x + b * x + c;
+		
+		console.log(outputNumber);
     
     		displayResults();
 	}
@@ -241,39 +241,40 @@ None
 						<h1>User Input Page</h1>
 					</div>
 		
-						<div id="content" class="w3-container">
-						<!--Form element. This allows for user input in HTML.-->
-							   <form>
-							<!--Label for first input field.-->
-							<label for="a">a constant:</label><br>
-							<!--User input box.-->
-							<input type="number" id="a" value="0"><br>
-							<!--Label for second input field.-->
-							<label for="b">b constant:</label><br>
-							<!--User input box.-->
-							<input type="number" id="b" value="0"><br><br><br>
+					<div id="content" class="w3-container">
+					<!--Form element. This allows for user input in HTML.-->
+						   <form>
+						<!--Label for first input field.-->
+						<label for="a">a constant:</label><br>
+						<!--User input box.-->
+						<input type="number" id="a" value="0"><br>
+							   
+						<!--Label for second input field.-->
+						<label for="b">b constant:</label><br>
+						<!--User input box.-->
+						<input type="number" id="b" value="0"><br><br><br>
 
-							<label for="c">c constant:</label><br>
-							<!--User input box.-->
-							<input type="number" id="c" value="0"><br><br><br>
+						<label for="c">c constant:</label><br>
+						<!--User input box.-->
+						<input type="number" id="c" value="0"><br><br><br>
 
-							<label for="x">x value</label><br>
-							<!--User input box.-->
-							<input type="number" id="x" value="0"><br><br><br>
-							</form>
-					
+						<label for="x">x value</label><br>
+						<!--User input box.-->
+						<input type="number" id="x" value="0"><br><br><br>
+						</form>
+
 				
 						<center>
 						<!--Button. When clicked, runs the addition() function.-->
-								 <a onclick="quad();" class="w3-btn w3-deep-purple">Compute Y</a><br>
+						 	<a onclick="quad();" class="w3-btn w3-deep-purple">Compute Y</a><br>
 	
 						<!--The following placeholder p element text should be replaced with the results of the calculation.-->
-								 <div id="content" class="w3-container">
-									   <p id="end">Results should appear here.</p>
-								 </div>
-					 
-								 <br>
-								 <br>
+						 <div id="content" class="w3-container">
+							   <p id="end">Results should appear here.</p>
+						 </div>
+
+						 <br>
+						 <br>
 					   
 						<p>Return to home page and reset calculator.</p> 
 						<!--The following button takes the user back to the home page and resets all variables.-->			
